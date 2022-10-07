@@ -14,14 +14,3 @@ To apply config changes:
 docker exec -it nginx-base service nginx reload
 ```
 
-
-```PowerShell
-New-SelfSignedCertificate `
-    -KeyExportPolicy Exportable `
-    -Subject "CN=localhost" `
-    -KeyAlgorithm RSA `
-    -KeyLength 2048 `
-    -KeyUsage DigitalSignature `
-    -NotAfter (Get-Date).AddMonths(12) `
-    -CertStoreLocation "Cert:\CurrentUser\My"
-```
